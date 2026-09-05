@@ -25,7 +25,8 @@ users[i].name =name;
 }
 }
 function Delete(uint id) public {
-delete users[id];
+uint index = find(id);
+delete users[index];
 }
 function find(uint id) view internal returns(uint) {
 for(uint i=0; i< users.length; i++) {
